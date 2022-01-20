@@ -1,7 +1,13 @@
-.button {
-    -fx-border-width: 5px;
-    -fx-border-color: #00ff00;
-    -fx-background-color: #00ff00;
-    -fx-font-size_ 2em;
-    -fx-text-fill: #0000ff;
+.marcador {
+    -fx-background-color: red;
+}
+
+.btnSucursal{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #828282;
 }
