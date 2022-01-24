@@ -1,9 +1,9 @@
-.marcador {
+.panelLateral {
     -fx-background-color: grey;
 }
 
 
-.btnSucursal{
+.btnSucursal {
     -fx-border-color: white;
     -fx-border-width: 1;
     -fx-background-radius: 0;

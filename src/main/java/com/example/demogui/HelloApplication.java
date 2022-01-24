@@ -7,14 +7,18 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+
+
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("EkonosGUI.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1130, 835);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Ekonos");
-        stage.setMaximized(true);
         stage.setScene(scene);
+        stage.setMinWidth(700);
+        stage.setMinHeight(500);
         stage.show();
     }
 
