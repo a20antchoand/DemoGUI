@@ -8,6 +8,7 @@
 
 
 <GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+    fx:id="ekonos_GP"
     maxHeight="-Infinity" maxWidth="-Infinity"
     minHeight="-Infinity" minWidth="-Infinity"
     prefHeight="400.0" prefWidth="600.0"
@@ -22,7 +23,7 @@
     </rowConstraints>
 
 
-    <VBox alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="0">
+    <VBox fx:id="panel1" alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="0">
         <Label text="EKONOS 2022">
             <VBox.margin>
                 <Insets top="50.0" />
@@ -38,15 +39,20 @@
 
     <AnchorPane fx:id="tablero_AnchorPane"
         styleClass="tablero" stylesheets="@style.css"
-        GridPane.columnIndex="1" GridPane.fillWidth="true" GridPane.fillHeight="true"
-        maxWidth="100">
+        GridPane.columnIndex="1" GridPane.rowIndex="0"
+        GridPane.fillWidth="true" GridPane.fillHeight="true">
 
-        <ImageView fitWidth="${tablero_AnchorPane.width}" pickOnBounds="true" preserveRatio="true">
-            <Image url="@imatges/Map.jpg"/>
-        </ImageView>
+        <Label layoutX="0" layoutY="0" text="${panel1.width}" style="-fx-background-color: white;"/>
+        <Label layoutX="0" layoutY="20" text="${panel1.height}" style="-fx-background-color: white;"/>
+
+        <Label layoutX="100" layoutY="0" text="${tablero_AnchorPane.width}" style="-fx-background-color: white;"/>
+        <Label layoutX="100" layoutY="20" text="${tablero_AnchorPane.height + 39}" style="-fx-background-color: white;"/>
+
+        <Label layoutX="200" layoutY="0" text="${panel2.width}" style="-fx-background-color: white;"/>
+        <Label layoutX="200" layoutY="20" text="${panel2.height}" style="-fx-background-color: white;"/>
     </AnchorPane>
 
-    <VBox alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="2">
+    <VBox fx:id="panel2" alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="2">
         <Label text="Mano jugadors">
             <VBox.margin>
                 <Insets top="50.0" />

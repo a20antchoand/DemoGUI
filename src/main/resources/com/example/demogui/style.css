@@ -4,8 +4,11 @@
 }
 
 .tablero {
-
     -fx-background-image: url("imatges/Map.jpg");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: auto 100%;
 }
 
 

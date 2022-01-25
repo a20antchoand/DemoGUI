@@ -1,32 +1,59 @@
 package com.example.demogui;
 
-import javafx.event.ActionEvent;
+import javafx.beans.Observable;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
+import javafx.fxml.Initializable;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Window;
 
-public class HelloController {
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.MouseInputAdapter;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HelloController implements Initializable {
+    final double TABLERO_ASPECT_RATIO = 0.7244600116754232;
+
+
+    Thread windowResizedEventListenerThread;
+
+
+    @FXML
+    private GridPane ekonos_GP;
+
     @FXML
     private AnchorPane tablero_AnchorPane;
 
-    @FXML
-    private ImageView tablero_img;
 
-    @FXML
-    private Button botonHola;
-
-
-    public HelloController() {
-        //tablero_img.fitWidthProperty().bind(tablero_AnchorPane.widthProperty());
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        tablero_AnchorPane.widthProperty().addListener(this::stage_onWidthChange);
+        tablero_AnchorPane.heightProperty().addListener(this::stage_onHeightChange);
     }
 
 
 
 
-    @FXML
-    private void prueba(ActionEvent e) {
-        tablero_img.setFitWidth(200);
+    private void stage_onWidthChange(Observable obs, Number oldValue, Number newValue) {
+        double newHeight = tablero_AnchorPane.getWidth() / TABLERO_ASPECT_RATIO + 39;
+
+        //tablero_AnchorPane.widthProperty().removeListener(this::stage_onWidthChange);
+        //ekonos_GP.getScene().getWindow().setHeight(newHeight);
+        //tablero_AnchorPane.widthProperty().addListener(this::stage_onWidthChange);
+    }
+
+    private void stage_onHeightChange(Observable obs, Number oldValue, Number newValue) {
+        double newWidth = newValue.doubleValue() * TABLERO_ASPECT_RATIO + 300 + 200;
+
+        //System.out.println(ekonos_GP.getWidth() + '\t' + ekonos_GP.getHeight());
+        //System.out.println(newWidth);
+        //System.out.println();
+
+        //tablero_AnchorPane.widthProperty().removeListener(this::stage_onWidthChange);
+        //ekonos_GP.getScene().getWindow().setHeight(newValue.doubleValue() * TABLERO_ASPECT_RATIO + 300 + 200);
+        //tablero_AnchorPane.widthProperty().addListener(this::stage_onWidthChange);
     }
 }
