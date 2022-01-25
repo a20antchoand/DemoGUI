@@ -4,21 +4,29 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private AnchorPane tablero_AnchorPane;
 
     @FXML
-    private Label sucursal;
+    private ImageView tablero_img;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private Button botonHola;
+
+
+    public HelloController() {
+        //tablero_img.fitWidthProperty().bind(tablero_AnchorPane.widthProperty());
     }
 
-    //On click show sucursal id
-    public void btnSucursal_onClick(ActionEvent actionEvent) {
-        sucursal.setText("Sucursal: " + ((Button)actionEvent.getSource()).getId());
+
+
+
+    @FXML
+    private void prueba(ActionEvent e) {
+        tablero_img.setFitWidth(200);
     }
 }

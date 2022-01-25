@@ -2,21 +2,32 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
-<?import javafx.geometry.Insets?><?import javafx.scene.image.ImageView?><?import javafx.scene.image.Image?>
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-    prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+
+<GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+    maxHeight="-Infinity" maxWidth="-Infinity"
+    minHeight="-Infinity" minWidth="-Infinity"
+    prefHeight="400.0" prefWidth="600.0"
+    fx:controller="com.example.demogui.HelloController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="200" maxWidth="200"/>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="300" prefWidth="300"/>
+        <ColumnConstraints fx:id="prueba" hgrow="SOMETIMES" minWidth="300" prefWidth="300"/>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="200" maxWidth="200"/>
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES"/>
     </rowConstraints>
 
+
     <VBox alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="0">
-        <Label text="EKONOS 2022" />
+        <Label text="EKONOS 2022">
+            <VBox.margin>
+                <Insets top="50.0" />
+            </VBox.margin>
+        </Label>
 
         <Label fx:id="sucursal" text="Sucursal: ">
             <VBox.margin>
@@ -26,9 +37,7 @@
     </VBox>
 
     <AnchorPane fx:id="tablero_AnchorPane" styleClass="tablero" stylesheets="@style.css" GridPane.columnIndex="1">
-        <ImageView fitHeight="${tablero_AnchorPane.width}" pickOnBounds="true" preserveRatio="true">
-            <Image url="@imatges/Map.jpg" />
-        </ImageView>
+
     </AnchorPane>
 
     <VBox alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="2">

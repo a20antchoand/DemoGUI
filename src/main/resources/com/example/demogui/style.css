@@ -1,5 +1,11 @@
 .panelLateral {
     -fx-background-color: grey;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.tablero {
+
+    -fx-background-image: url("imatges/Map.jpg");
 }
 
 
