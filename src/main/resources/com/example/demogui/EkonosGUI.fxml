@@ -13,9 +13,9 @@
     prefHeight="400.0" prefWidth="600.0"
     fx:controller="com.example.demogui.HelloController">
     <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="200" maxWidth="200"/>
-        <ColumnConstraints fx:id="prueba" hgrow="SOMETIMES" minWidth="300" prefWidth="300"/>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="200" maxWidth="200"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="200" prefWidth="200" maxWidth="200"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="300" prefWidth="300"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="300" prefWidth="300" maxWidth="300"/>
     </columnConstraints>
     <rowConstraints>
         <RowConstraints vgrow="SOMETIMES"/>
@@ -36,8 +36,14 @@
         </Label>
     </VBox>
 
-    <AnchorPane fx:id="tablero_AnchorPane" styleClass="tablero" stylesheets="@style.css" GridPane.columnIndex="1">
+    <AnchorPane fx:id="tablero_AnchorPane"
+        styleClass="tablero" stylesheets="@style.css"
+        GridPane.columnIndex="1" GridPane.fillWidth="true" GridPane.fillHeight="true"
+        maxWidth="100">
 
+        <ImageView fitWidth="${tablero_AnchorPane.width}" pickOnBounds="true" preserveRatio="true">
+            <Image url="@imatges/Map.jpg"/>
+        </ImageView>
     </AnchorPane>
 
     <VBox alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="2">
