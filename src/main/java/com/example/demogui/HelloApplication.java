@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.beans.Observable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -20,6 +21,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("EkonosGUI.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Ekonos");
+        stage.getIcons().add(new Image("file:src/main/resources/com/example/demogui/imatges/icon.png"));
         stage.setScene(scene);
         stage.setResizable(false);
         adaptarTamanio(stage);
