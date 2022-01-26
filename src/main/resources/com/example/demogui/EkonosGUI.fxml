@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-
-<GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-    fx:id="ekonos_GP"
-    maxHeight="-Infinity" maxWidth="-Infinity"
-    minHeight="-Infinity" minWidth="-Infinity"
-    prefHeight="400.0" prefWidth="600.0"
-    fx:controller="com.example.demogui.HelloController">
+<GridPane fx:id="ekonos_GP" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.HelloController">
     <columnConstraints>
-        <ColumnConstraints hgrow="NEVER" minWidth="200" prefWidth="200" maxWidth="200"/>
-        <ColumnConstraints hgrow="ALWAYS" minWidth="300" prefWidth="300"/>
-        <ColumnConstraints hgrow="NEVER" minWidth="300" prefWidth="300" maxWidth="300"/>
+        <ColumnConstraints hgrow="NEVER" maxWidth="200" minWidth="200" prefWidth="200" />
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints hgrow="NEVER" maxWidth="300" minWidth="300" prefWidth="300" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints vgrow="SOMETIMES"/>
+        <RowConstraints vgrow="SOMETIMES" />
     </rowConstraints>
 
 
@@ -31,47 +28,43 @@
         </Label>
     </VBox>
 
-    <AnchorPane fx:id="panelTablero"
-        styleClass="tablero" stylesheets="@style.css"
-        GridPane.columnIndex="1" GridPane.rowIndex="0"
-        GridPane.fillWidth="true" GridPane.fillHeight="true">
-
-        123.0 522.0
-        176.0 477.0
-        287.0 444.0
-        344.0 454.0
-        397.0 430.0
-        462.0 438.0
-        525.0 474.0
-        171.0 526.0
-        235.0 553.0
-        296.0 512.0
-        419.0 502.0
-        182.0 568.0
-        239.0 595.0
-        278.0 568.0
-        321.0 561.0
-        391.0 559.0
-        496.0 574.0
-        193.0 619.0
-        256.0 640.0
-        296.0 616.0
-        343.0 600.0
-        343.0 640.0
-        394.0 641.0
-        468.0 664.0
-        107.0 688.0
-        167.0 668.0
-        214.0 669.0
-        268.0 687.0
-        311.0 689.0
-        403.0 690.0
-        508.0 728.0
-        48.0 734.0
-        114.0 741.0
-        177.0 726.0
-        327.0 735.0
-        446.0 773.0
+    <AnchorPane fx:id="panelTablero" prefHeight="836.0" prefWidth="606.0" styleClass="tablero" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.fillHeight="true" GridPane.fillWidth="true" GridPane.rowIndex="0">
+        <Button fx:id="suc1" AnchorPane.leftAnchor="123.0" AnchorPane.topAnchor="522.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc2" AnchorPane.leftAnchor="176.0" AnchorPane.topAnchor="477.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc3" AnchorPane.leftAnchor="287.0" AnchorPane.topAnchor="444.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc4" AnchorPane.leftAnchor="344.0" AnchorPane.topAnchor="454.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc5" AnchorPane.leftAnchor="397.0" AnchorPane.topAnchor="430.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc6" AnchorPane.leftAnchor="462.0" AnchorPane.topAnchor="438.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc7" AnchorPane.leftAnchor="525.0" AnchorPane.topAnchor="474.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc8" AnchorPane.leftAnchor="171.0" AnchorPane.topAnchor="526.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc9" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="553.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc10" AnchorPane.leftAnchor="296.0" AnchorPane.topAnchor="512.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc11" AnchorPane.leftAnchor="419.0" AnchorPane.topAnchor="502.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc12" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="568.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc13" AnchorPane.leftAnchor="239.0" AnchorPane.topAnchor="595.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc14" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="568.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc15" AnchorPane.leftAnchor="321.0" AnchorPane.topAnchor="561.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc16" AnchorPane.leftAnchor="391.0" AnchorPane.topAnchor="559.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc17" AnchorPane.leftAnchor="496.0" AnchorPane.topAnchor="574.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc18" AnchorPane.leftAnchor="193.0" AnchorPane.topAnchor="619.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc19" AnchorPane.leftAnchor="256.0" AnchorPane.topAnchor="640.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc20" AnchorPane.leftAnchor="296.0" AnchorPane.topAnchor="616.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc21" AnchorPane.leftAnchor="343.0" AnchorPane.topAnchor="600.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc22" AnchorPane.leftAnchor="343.0" AnchorPane.topAnchor="640.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc23" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="641.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc24" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="664.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc25" AnchorPane.leftAnchor="107.0" AnchorPane.topAnchor="688.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc26" AnchorPane.leftAnchor="167.0" AnchorPane.topAnchor="668.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc27" AnchorPane.leftAnchor="214.0" AnchorPane.topAnchor="669.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc28" AnchorPane.leftAnchor="268.0" AnchorPane.topAnchor="687.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc29" AnchorPane.leftAnchor="311.0" AnchorPane.topAnchor="689.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc30" AnchorPane.leftAnchor="403.0" AnchorPane.topAnchor="690.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc31" AnchorPane.leftAnchor="508.0" AnchorPane.topAnchor="728.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc32" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="734.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc33" AnchorPane.leftAnchor="114.0" AnchorPane.topAnchor="741.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc34" AnchorPane.leftAnchor="177.0" AnchorPane.topAnchor="726.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc35" AnchorPane.leftAnchor="327.0" AnchorPane.topAnchor="735.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
+        <Button fx:id="suc36" AnchorPane.leftAnchor="446.0" AnchorPane.topAnchor="773.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
     </AnchorPane>
 
     <VBox fx:id="panelAcciones" alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="2">
