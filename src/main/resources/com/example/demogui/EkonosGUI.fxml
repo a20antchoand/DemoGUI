@@ -23,36 +23,58 @@
     </rowConstraints>
 
 
-    <VBox fx:id="panel1" alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="0">
+    <VBox fx:id="panelJugadores" alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="0">
         <Label text="EKONOS 2022">
             <VBox.margin>
                 <Insets top="50.0" />
             </VBox.margin>
         </Label>
-
-        <Label fx:id="sucursal" text="Sucursal: ">
-            <VBox.margin>
-                <Insets top="20.0" />
-            </VBox.margin>
-        </Label>
     </VBox>
 
-    <AnchorPane fx:id="tablero_AnchorPane"
+    <AnchorPane fx:id="panelTablero"
         styleClass="tablero" stylesheets="@style.css"
         GridPane.columnIndex="1" GridPane.rowIndex="0"
         GridPane.fillWidth="true" GridPane.fillHeight="true">
 
-        <Label layoutX="0" layoutY="0" text="${panel1.width}" style="-fx-background-color: white;"/>
-        <Label layoutX="0" layoutY="20" text="${panel1.height}" style="-fx-background-color: white;"/>
-
-        <Label layoutX="100" layoutY="0" text="${tablero_AnchorPane.width}" style="-fx-background-color: white;"/>
-        <Label layoutX="100" layoutY="20" text="${tablero_AnchorPane.height + 39}" style="-fx-background-color: white;"/>
-
-        <Label layoutX="200" layoutY="0" text="${panel2.width}" style="-fx-background-color: white;"/>
-        <Label layoutX="200" layoutY="20" text="${panel2.height}" style="-fx-background-color: white;"/>
+        123.0 522.0
+        176.0 477.0
+        287.0 444.0
+        344.0 454.0
+        397.0 430.0
+        462.0 438.0
+        525.0 474.0
+        171.0 526.0
+        235.0 553.0
+        296.0 512.0
+        419.0 502.0
+        182.0 568.0
+        239.0 595.0
+        278.0 568.0
+        321.0 561.0
+        391.0 559.0
+        496.0 574.0
+        193.0 619.0
+        256.0 640.0
+        296.0 616.0
+        343.0 600.0
+        343.0 640.0
+        394.0 641.0
+        468.0 664.0
+        107.0 688.0
+        167.0 668.0
+        214.0 669.0
+        268.0 687.0
+        311.0 689.0
+        403.0 690.0
+        508.0 728.0
+        48.0 734.0
+        114.0 741.0
+        177.0 726.0
+        327.0 735.0
+        446.0 773.0
     </AnchorPane>
 
-    <VBox fx:id="panel2" alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="2">
+    <VBox fx:id="panelAcciones" alignment="TOP_CENTER" styleClass="panelLateral" stylesheets="@style.css" GridPane.columnIndex="2">
         <Label text="Mano jugadors">
             <VBox.margin>
                 <Insets top="50.0" />
