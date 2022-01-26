@@ -2,15 +2,18 @@ package com.example.demogui;
 
 import javafx.stage.Window;
 
-import java.time.LocalTime;
-
 public class WindowResizedEventListener implements Runnable {
 
-    private Window ventana;
+    private final Thread windowResizedEventListenerThread;
+    private final Window ventana;
+    private final WindowResizedAction windowResizedAction;
 
 
-    public WindowResizedEventListener(Window ventana) {
+    public WindowResizedEventListener(Window ventana, WindowResizedAction action) {
         this.ventana = ventana;
+        this.windowResizedAction = action;
+        this.windowResizedEventListenerThread = new Thread(this);
+        this.windowResizedEventListenerThread.start();
     }
 
 
@@ -19,22 +22,24 @@ public class WindowResizedEventListener implements Runnable {
     @Override
     public void run() {
         double valorAnterior = 0;
+        boolean modificacion = false;
 
 
         while (true) {
             if (valorAnterior != ventana.getWidth()) {
-                System.out.println("Modificación");
                 valorAnterior = ventana.getWidth();
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(valorAnterior + "\t" + ventana.getWidth());
+                modificacion = true;
+            }
 
-                if (valorAnterior == ventana.getWidth()) {
-                    System.out.println("Fin modificación");
-                }
+            else if (modificacion == true) {
+                windowResizedAction.action();
+                modificacion = false;
+            }
+
+            try {
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }

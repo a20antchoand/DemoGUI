@@ -12,13 +12,14 @@ import javafx.stage.Window;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.MouseInputAdapter;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
     final double TABLERO_ASPECT_RATIO = 0.7244600116754232;
 
-
-    Thread windowResizedEventListenerThread;
+    WindowResizedEventListener prueba;
 
 
     @FXML
@@ -40,9 +41,19 @@ public class HelloController implements Initializable {
     private void stage_onWidthChange(Observable obs, Number oldValue, Number newValue) {
         double newHeight = tablero_AnchorPane.getWidth() / TABLERO_ASPECT_RATIO + 39;
 
+        if (prueba == null)
+            prueba = new WindowResizedEventListener(
+                    ekonos_GP.getScene().getWindow(),
+                    () -> prueba2());
+
         //tablero_AnchorPane.widthProperty().removeListener(this::stage_onWidthChange);
         //ekonos_GP.getScene().getWindow().setHeight(newHeight);
         //tablero_AnchorPane.widthProperty().addListener(this::stage_onWidthChange);
+    }
+
+    private void prueba2() {
+        double newHeight = tablero_AnchorPane.getWidth() / TABLERO_ASPECT_RATIO + 39;
+        ekonos_GP.getScene().getWindow().setHeight(newHeight);
     }
 
     private void stage_onHeightChange(Observable obs, Number oldValue, Number newValue) {

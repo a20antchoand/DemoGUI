@@ -5,6 +5,7 @@ import javafx.beans.Observable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 
@@ -23,6 +24,7 @@ public class HelloApplication extends Application {
         stage.setMinWidth(STAGE_MIN_WIDTH);
         stage.setMinHeight(STAGE_MIN_HEIGHT);
         stage.show();
+        stage.setOnCloseRequest(windowEvent -> System.exit(0));
     }
 
     public static void main(String[] args) {
