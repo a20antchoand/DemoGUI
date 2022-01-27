@@ -28,7 +28,7 @@
         </Label>
     </VBox>
 
-    <AnchorPane fx:id="panelTablero" prefHeight="836.0" prefWidth="606.0" styleClass="tablero" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.fillHeight="true" GridPane.fillWidth="true" GridPane.rowIndex="0">
+    <AnchorPane fx:id="panelTablero" prefWidth="606.0" prefHeight="836.0" styleClass="tablero" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.fillHeight="true" GridPane.fillWidth="true" GridPane.rowIndex="0">
         <Button fx:id="suc1" AnchorPane.leftAnchor="123.0" AnchorPane.topAnchor="522.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
         <Button fx:id="suc2" AnchorPane.leftAnchor="176.0" AnchorPane.topAnchor="477.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />
         <Button fx:id="suc3" AnchorPane.leftAnchor="287.0" AnchorPane.topAnchor="444.0" mnemonicParsing="false"  prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@style.css" />

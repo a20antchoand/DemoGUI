@@ -2,10 +2,10 @@ package com.example.demogui;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.control.Button;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -25,8 +25,7 @@ public class HelloController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        panelTablero.setOnMouseClicked(ActionEvent -> colocarBotonesSucursales());
-        colocarBotonesSucursales();
+        new OnLoadedEventListener(panelTablero, () -> colocarBotonesSucursales());
     }
 
 
@@ -39,18 +38,24 @@ public class HelloController implements Initializable {
         double tableroHeight_actual = panelTablero.getHeight();
 
 
-        System.out.println(panelTablero.getWidth());
-
         for (var btnSucursal : panelTablero.getChildren()) {
             double leftAnchor_actual = AnchorPane.getLeftAnchor(btnSucursal);
             double topAnchor_actual = AnchorPane.getTopAnchor(btnSucursal);
+
             double leftAnchor_nuevo = tableroWidth_actual * leftAnchor_actual / tableroWidth_muestra;
             double topAnchor_nuevo = tableroHeight_actual * topAnchor_actual / tableroHeight_muestra;
 
-            //System.out.println(leftAnchor_nuevo + "\t" + topAnchor_nuevo);
+            double nuevoWidth = tableroWidth_actual * ((Button) btnSucursal).getWidth() / tableroWidth_muestra;
+            double nuevoHeight = tableroHeight_actual * ((Button) btnSucursal).getHeight() / tableroHeight_muestra;
+
+
 
             AnchorPane.setLeftAnchor(btnSucursal, leftAnchor_nuevo);
             AnchorPane.setTopAnchor(btnSucursal, topAnchor_nuevo);
+            btnSucursal.prefWidth(200);
+            btnSucursal.minWidth(200);
+            btnSucursal.maxWidth(200);
+            btnSucursal.prefHeight(200);
         }
     }
 }
