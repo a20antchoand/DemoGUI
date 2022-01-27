@@ -53,12 +53,12 @@ public class HelloController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
        rotatePar3.setOnMouseClicked((ActionEvent) -> {
-               rotateImp1.setRotate(rotateImp1.getRotate() + 20);
-               rotatePar1.setRotate(rotatePar1.getRotate() - 20);
-               rotateImp2.setRotate(rotateImp2.getRotate() + 20);
-               rotatePar2.setRotate(rotatePar2.getRotate() - 20);
-               rotateImp3.setRotate(rotateImp3.getRotate() + 20);
-               rotatePar3.setRotate(rotatePar3.getRotate() - 20);
+               rotateImp1.setRotate(rotateImp1.getRotate() + 30);
+               rotatePar1.setRotate(rotatePar1.getRotate() - 30);
+               rotateImp2.setRotate(rotateImp2.getRotate() + 30);
+               rotatePar2.setRotate(rotatePar2.getRotate() - 30);
+               rotateImp3.setRotate(rotateImp3.getRotate() + 30);
+               rotatePar3.setRotate(rotatePar3.getRotate() - 30);
            rotateP1.setRotate(rotateP1.getRotate() + 20);
            rotateP2.setRotate(rotateP2.getRotate() - 20);
            rotateP3.setRotate(rotateP3.getRotate() + 20);

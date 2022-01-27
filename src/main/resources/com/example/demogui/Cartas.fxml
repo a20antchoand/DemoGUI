@@ -3,10 +3,9 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-
-      <ImageView fitHeight="350.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@imatges/image.png" />
-         </image>
-      </ImageView>
+<ImageView fitHeight="350.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+    <image>
+        <Image url="@imatges/cartaBack.png" />
+    </image>
+</ImageView>
 
