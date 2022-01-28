@@ -34,28 +34,40 @@ public class HelloController implements Initializable {
     private void colocarBotonesSucursales() {
         final double tableroWidth_muestra = 606;
         final double tableroHeight_muestra = 836;
-        double tableroWidth_actual = panelTablero.getWidth();
-        double tableroHeight_actual = panelTablero.getHeight();
+        final double tableroWidth_actual = panelTablero.getWidth();
+        final double tableroHeight_actual = panelTablero.getHeight();
+
+        System.out.println(panelTablero.getScene().getWidth() - 500 + " * " + panelTablero.getScene().getHeight());
+        System.out.println(tableroWidth_actual + " * " + tableroHeight_actual);
 
 
         for (var btnSucursal : panelTablero.getChildren()) {
+            // Anchors
             double leftAnchor_actual = AnchorPane.getLeftAnchor(btnSucursal);
             double topAnchor_actual = AnchorPane.getTopAnchor(btnSucursal);
 
             double leftAnchor_nuevo = tableroWidth_actual * leftAnchor_actual / tableroWidth_muestra;
             double topAnchor_nuevo = tableroHeight_actual * topAnchor_actual / tableroHeight_muestra;
 
+
+            // Dimensiones
             double nuevoWidth = tableroWidth_actual * ((Button) btnSucursal).getWidth() / tableroWidth_muestra;
-            double nuevoHeight = tableroHeight_actual * ((Button) btnSucursal).getHeight() / tableroHeight_muestra;
+            double nuevoHeight = nuevoWidth;
 
 
-
+            // Cambio a los nuevos valores
+            ((Button) btnSucursal).setPrefWidth(nuevoWidth);
+            ((Button) btnSucursal).setPrefHeight(nuevoHeight);
             AnchorPane.setLeftAnchor(btnSucursal, leftAnchor_nuevo);
             AnchorPane.setTopAnchor(btnSucursal, topAnchor_nuevo);
-            btnSucursal.prefWidth(200);
-            btnSucursal.minWidth(200);
-            btnSucursal.maxWidth(200);
-            btnSucursal.prefHeight(200);
+
+
+            System.out.println(btnSucursal.getId());
+            System.out.println("Tablero: " + tableroWidth_actual + " * " + tableroHeight_actual);
+            System.out.println("Anchor pre: " + leftAnchor_actual + " - " + topAnchor_actual);
+            System.out.println("Anchor: " + AnchorPane.getLeftAnchor(btnSucursal) + " - " + AnchorPane.getTopAnchor(btnSucursal));
+            System.out.println("Width: " + ((Button) btnSucursal).getPrefWidth() + " - " + ((Button) btnSucursal).getPrefHeight());
+            System.out.println();
         }
     }
 }
