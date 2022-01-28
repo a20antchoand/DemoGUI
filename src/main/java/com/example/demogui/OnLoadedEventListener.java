@@ -27,7 +27,7 @@ public class OnLoadedEventListener implements Runnable {
             // Espera a que el elemento tenga un mínimo de píxeles
             while (panel.getWidth() == 0.0 && panel.getHeight() == 0.0) Thread.sleep(10);
             // Espera a posibles cambios de la interfaz tras ejecutar
-            Thread.sleep(50);
+            Thread.sleep(100);
             // Realiza la acción deseada por el usuario
             accion.action();
 
