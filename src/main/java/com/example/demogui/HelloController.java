@@ -1,5 +1,6 @@
 package com.example.demogui;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -33,6 +34,8 @@ public class HelloController implements Initializable {
 
 
 
+
+    // * Redimensionado del juego
 
     private void redimensionarJuego() {
         adaptarDimensionPantalla();
@@ -79,4 +82,9 @@ public class HelloController implements Initializable {
             AnchorPane.setTopAnchor(btnSucursal, topAnchor_nuevo);
         }
     }
+
+
+
+
+    // * Controles de la interfaz
 }
