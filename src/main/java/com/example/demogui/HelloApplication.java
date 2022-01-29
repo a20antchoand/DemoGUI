@@ -12,7 +12,7 @@ import java.io.IOException;
 
 
 public class HelloApplication extends Application {
-    final double TABLERO_ASPECT_RATIO = 0.7244600116754232;
+
 
 
     @Override
@@ -24,24 +24,10 @@ public class HelloApplication extends Application {
         stage.setTitle("Ekonos");
         stage.setScene(scene);
         stage.setResizable(false);
-        adaptarTamanio(stage);
         stage.show();
     }
 
     public static void main(String[] args) {
         launch();
-    }
-
-
-
-
-    private void adaptarTamanio(Stage stage) {
-        Dimension dimensionesPantalla = Toolkit.getDefaultToolkit().getScreenSize();
-        double windowHeight = dimensionesPantalla.getHeight() - 90;
-        double windowWidth = (windowHeight - 20) * TABLERO_ASPECT_RATIO + 300 + 200;
-
-
-        stage.setHeight(windowHeight);
-        stage.setWidth(windowWidth);
     }
 }
