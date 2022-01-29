@@ -16,7 +16,7 @@ public class OnLoadedEventListener implements Runnable {
         this.accion = accion;
 
 
-        EVENT_THREAD = new Thread(this);
+        EVENT_THREAD = new Thread(this, "OnLoadedEventListener");
         EVENT_THREAD.start();
     }
 
