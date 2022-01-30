@@ -24,7 +24,7 @@ public class HelloApplication extends Application {
         stage.getIcons().add(new Image("file:src/main/resources/com/example/demogui/imatges/icon.png"));
         stage.setScene(scene);
         stage.setResizable(false);
-        adaptarTamanio(stage);
+        //adaptarTamanio(stage);
         stage.show();
     }
 

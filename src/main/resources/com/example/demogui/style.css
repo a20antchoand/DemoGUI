@@ -11,6 +11,13 @@
     -fx-background-size: auto 100%;
 }
 
+.formulario {
+    -fx-background-image: url("imatges/background.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: auto 100%;
+}
 
 .btnSucursal {
     -fx-border-color: white;
