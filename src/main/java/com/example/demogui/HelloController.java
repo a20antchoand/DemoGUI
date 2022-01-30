@@ -13,6 +13,7 @@ import javafx.stage.Window;
 
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.MouseInputAdapter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +50,10 @@ public class HelloController {
     @FXML
     private ImageView rotateP6;
 
+    @FXML
+    private void switchView() throws IOException {
+        HelloApplication.setRoot("formulari");
+    }
 
     public void onClick_btn() {
 
