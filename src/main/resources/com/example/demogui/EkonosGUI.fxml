@@ -251,7 +251,7 @@
                               <Point3D y="1.0" />
                            </rotationAxis>
                         </ImageView>
-                        <Button fx:id="gira" layoutX="139.0" layoutY="699.0" mnemonicParsing="false" onAction="#initialize" text="Button" />
+                        <Button fx:id="gira" layoutX="139.0" layoutY="699.0" mnemonicParsing="false" onAction="#onClick_btn" text="Button" />
                      </children></AnchorPane>
             </content>
           </Tab>

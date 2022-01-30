@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class HelloController {
     @FXML
     private GridPane ekonos_GP;
     @FXML
@@ -50,22 +50,20 @@ public class HelloController implements Initializable {
     private ImageView rotateP6;
 
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-       rotatePar3.setOnMouseClicked((ActionEvent) -> {
-               rotateImp1.setRotate(rotateImp1.getRotate() + 30);
-               rotatePar1.setRotate(rotatePar1.getRotate() - 30);
-               rotateImp2.setRotate(rotateImp2.getRotate() + 30);
-               rotatePar2.setRotate(rotatePar2.getRotate() - 30);
-               rotateImp3.setRotate(rotateImp3.getRotate() + 30);
-               rotatePar3.setRotate(rotatePar3.getRotate() - 30);
-           rotateP1.setRotate(rotateP1.getRotate() + 20);
-           rotateP2.setRotate(rotateP2.getRotate() - 20);
-           rotateP3.setRotate(rotateP3.getRotate() + 20);
-           rotateP4.setRotate(rotateP4.getRotate() - 20);
-           rotateP5.setRotate(rotateP5.getRotate() + 20);
-           rotateP6.setRotate(rotateP6.getRotate() - 20);
-       });
+    public void onClick_btn() {
+
+        rotateImp1.setRotate(rotateImp1.getRotate() + 30);
+        rotatePar1.setRotate(rotatePar1.getRotate() - 30);
+        rotateImp2.setRotate(rotateImp2.getRotate() + 30);
+        rotatePar2.setRotate(rotatePar2.getRotate() - 30);
+        rotateImp3.setRotate(rotateImp3.getRotate() + 30);
+        rotatePar3.setRotate(rotatePar3.getRotate() - 30);
+        rotateP1.setRotate(rotateP1.getRotate() + 20);
+        rotateP2.setRotate(rotateP2.getRotate() - 20);
+        rotateP3.setRotate(rotateP3.getRotate() + 20);
+        rotateP4.setRotate(rotateP4.getRotate() - 20);
+        rotateP5.setRotate(rotateP5.getRotate() + 20);
+        rotateP6.setRotate(rotateP6.getRotate() - 20);
 
     }
 }
