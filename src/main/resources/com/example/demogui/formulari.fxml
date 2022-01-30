@@ -3,57 +3,81 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="601.0" scaleShape="false" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="com.example.demogui.Formulari">
-   <Button fx:id="addPlayer" layoutX="41.0" layoutY="80.0" mnemonicParsing="false" onAction="#addPlayer" prefWidth="125.0" text="Añadir jugador">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="450.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.Formulari">
+   <ImageView fitHeight="450.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@imatges/background.jpg" />
+      </image>
+   </ImageView>
+   <Button fx:id="addPlayer" layoutX="140.0" layoutY="78.0" mnemonicParsing="false" onAction="#addPlayer" prefWidth="125.0" text="Añadir jugador">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor></Button>
-   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="29.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="BIENVENIDO A EKONOS">
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="807.0" style="-fx-background-color: white;" text="BIENVENIDO A EKONOS">
       <font>
          <Font size="25.0" />
       </font>
    </Label>
-   <Button layoutX="435.0" layoutY="81.0" mnemonicParsing="false" onAction="#switchScene" prefWidth="125.0" text="Continuar">
+   <Button layoutX="534.0" layoutY="81.0" mnemonicParsing="false" onAction="#switchScene" prefWidth="125.0" text="Continuar">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor></Button>
 
-   <Label fx:id="player1_lbl" layoutX="41.0" layoutY="153.0" prefHeight="15.0" prefWidth="75.0" text="Jugador 1" />
-   <TextField fx:id="player1_txt" layoutX="135.0" layoutY="152.0" prefHeight="25.0" prefWidth="426.0">
+   <Label fx:id="player1_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="151.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-radius: 15px;" text="Jugador 1" textAlignment="CENTER" />
+   <TextField fx:id="player1_txt" layoutX="234.0" layoutY="150.0" prefHeight="25.0" prefWidth="426.0">
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor>
       <effect>
-         <Reflection />
+         <DropShadow />
       </effect></TextField>
 
-   <Label fx:id="player2_lbl" layoutX="41.0" layoutY="202.0" prefHeight="15.0" prefWidth="75.0" text="Jugador 2" />
-   <TextField fx:id="player2_txt" layoutX="135.0" layoutY="200.0" prefHeight="25.0" prefWidth="426.0">
+   <Label fx:id="player2_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="200.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-radius: 15px;" text="Jugador 2" textAlignment="CENTER" />
+   <TextField fx:id="player2_txt" layoutX="234.0" layoutY="198.0" prefHeight="25.0" prefWidth="426.0">
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor>
       <effect>
-         <Reflection />
+         <DropShadow />
       </effect></TextField>
 
-   <Label fx:id="player3_lbl" layoutX="41.0" layoutY="252.0" prefHeight="15.0" prefWidth="75.0" text="Jugador 3" />
-   <TextField fx:id="player3_txt" layoutX="135.0" layoutY="250.0" prefHeight="25.0" prefWidth="426.0">
+   <Label fx:id="player3_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="250.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-radius: 15px;" text="Jugador 3" textAlignment="CENTER" />
+   <TextField fx:id="player3_txt" layoutX="234.0" layoutY="248.0" prefHeight="25.0" prefWidth="426.0">
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor>
       <effect>
-         <Reflection />
+         <DropShadow />
       </effect></TextField>
 
-   <Label fx:id="player4_lbl" layoutX="41.0" layoutY="302.0" prefHeight="15.0" prefWidth="75.0" text="Jugador 4" visible="false" />
-   <TextField fx:id="player4_txt" layoutX="135.0" layoutY="300.0" prefHeight="25.0" prefWidth="426.0" visible="false" />
+   <Label fx:id="player4_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="300.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-radius: 15px;" text="Jugador 4" textAlignment="CENTER" visible="false" />
+   <TextField fx:id="player4_txt" layoutX="234.0" layoutY="298.0" prefHeight="25.0" prefWidth="426.0" visible="false">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+      <effect>
+         <DropShadow />
+      </effect></TextField>
 
-   <Label fx:id="player5_lbl" layoutX="41.0" layoutY="352.0" prefHeight="15.0" prefWidth="75.0" text="Jugador 5" visible="false" />
-   <TextField fx:id="player5_txt" layoutX="135.0" layoutY="350.0" prefHeight="25.0" prefWidth="426.0" visible="false" />
+   <Label fx:id="player5_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="350.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-radius: 15px;" text="Jugador 5" textAlignment="CENTER" visible="false" />
+   <TextField fx:id="player5_txt" layoutX="234.0" layoutY="348.0" prefHeight="25.0" prefWidth="426.0" visible="false">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+      <effect>
+         <DropShadow />
+      </effect></TextField>
 
-   <Label fx:id="player6_lbl" layoutX="41.0" layoutY="402.0" prefHeight="15.0" prefWidth="75.0" text="Jugador 6" visible="false" />
-   <TextField fx:id="player6_txt" layoutX="135.0" layoutY="400.0" prefHeight="25.0" prefWidth="426.0" visible="false" />
+   <Label fx:id="player6_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="400.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-radius: 15px;" text="Jugador 6" textAlignment="CENTER" visible="false" />
+   <TextField fx:id="player6_txt" layoutX="234.0" layoutY="398.0" prefHeight="25.0" prefWidth="426.0" visible="false">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+      <effect>
+         <DropShadow />
+      </effect></TextField>
 </AnchorPane>

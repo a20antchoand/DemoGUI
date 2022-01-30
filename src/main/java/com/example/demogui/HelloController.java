@@ -37,38 +37,17 @@ public class HelloController {
     @FXML
     private ImageView rotatePar3;
 
-    @FXML
-    private ImageView rotateP1;
-    @FXML
-    private ImageView rotateP2;
-    @FXML
-    private ImageView rotateP3;
-    @FXML
-    private ImageView rotateP4;
-    @FXML
-    private ImageView rotateP5;
-    @FXML
-    private ImageView rotateP6;
 
     @FXML
     private void switchView() throws IOException {
         HelloApplication.setRoot("formulari");
     }
 
-    public void onClick_btn() {
+    public void onClick_btn () {
+        rotator r = new rotator(rotateImp1, rotateImp2, rotateImp3, rotatePar1, rotatePar2, rotatePar3);
 
-        rotateImp1.setRotate(rotateImp1.getRotate() + 30);
-        rotatePar1.setRotate(rotatePar1.getRotate() - 30);
-        rotateImp2.setRotate(rotateImp2.getRotate() + 30);
-        rotatePar2.setRotate(rotatePar2.getRotate() - 30);
-        rotateImp3.setRotate(rotateImp3.getRotate() + 30);
-        rotatePar3.setRotate(rotatePar3.getRotate() - 30);
-        rotateP1.setRotate(rotateP1.getRotate() + 20);
-        rotateP2.setRotate(rotateP2.getRotate() - 20);
-        rotateP3.setRotate(rotateP3.getRotate() + 20);
-        rotateP4.setRotate(rotateP4.getRotate() - 20);
-        rotateP5.setRotate(rotateP5.getRotate() + 20);
-        rotateP6.setRotate(rotateP6.getRotate() - 20);
+            r.run();
 
     }
+
 }
