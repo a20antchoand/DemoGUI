@@ -1,5 +1,6 @@
 package com.example.demogui;
 
+import javafx.application.Platform;
 import javafx.scene.layout.Pane;
 
 
@@ -29,7 +30,7 @@ public class OnLoadedEventListener implements Runnable {
             // Espera a posibles cambios de la interfaz tras ejecutar
             Thread.sleep(100);
             // Realiza la acción deseada por el usuario
-            accion.action();
+            Platform.runLater(() -> accion.execute());
 
         } catch (InterruptedException e) {
             e.printStackTrace();
