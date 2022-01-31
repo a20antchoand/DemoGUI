@@ -5,7 +5,7 @@ import javafx.scene.layout.Pane;
 
 public class OnLoadedEventListener implements Runnable {
 
-    private Thread EVENT_THREAD;
+    private final Thread EVENT_THREAD;
 
     private Pane panel;
     private OnLoadedAction accion;
