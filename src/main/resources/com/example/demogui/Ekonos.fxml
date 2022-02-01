@@ -250,7 +250,7 @@
                         </ImageView>
                         <ImageView fx:id="rotatePar1" fitHeight="500.0" fitWidth="150.0" layoutX="170.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@imatges/cartaFrontal.png" />
+                              <Image url="@imatges/cartaBack.png" />
                            </image>
                            <rotationAxis>
                               <Point3D y="1.0" />
@@ -266,7 +266,7 @@
                         </ImageView>
                         <ImageView fx:id="rotatePar2" fitHeight="500.0" fitWidth="150.0" layoutX="170.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@imatges/cartaFrontal.png" />
+                              <Image url="@imatges/cartaBack.png" />
                            </image>
                            <rotationAxis>
                               <Point3D y="1.0" />
@@ -282,7 +282,7 @@
                         </ImageView>
                         <ImageView fx:id="rotatePar3" fitHeight="500.0" fitWidth="150.0" layoutX="170.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@imatges/cartaFrontal.png" />
+                              <Image url="@imatges/cartaBack.png" />
                            </image>
                            <rotationAxis>
                               <Point3D y="1.0" />

@@ -31,7 +31,7 @@ public class Ekonos_GUI extends Application {
         stage.setTitle("Ekonos");
         stage.getIcons().add(new Image("file:src/main/resources/com/example/demogui/imatges/icon.png"));
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.show();
     }
 

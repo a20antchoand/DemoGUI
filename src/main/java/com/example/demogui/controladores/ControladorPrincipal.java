@@ -105,7 +105,7 @@ public class ControladorPrincipal implements Initializable {
     public void onClick_btn () {
         Rotator r = new Rotator(rotateImp1, rotateImp2, rotateImp3, rotatePar1, rotatePar2, rotatePar3);
 
-            r.run();
+        r.run();
 
     }
 }
