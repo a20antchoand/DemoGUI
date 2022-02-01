@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="ekonos_GP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.HelloController">
+<GridPane fx:id="ekonos_GP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.ControladorPrincipal">
     <columnConstraints>
         <ColumnConstraints hgrow="NEVER" maxWidth="200" minWidth="200" prefWidth="200" />
         <ColumnConstraints hgrow="ALWAYS" minWidth="300" prefWidth="300" />
@@ -26,7 +26,7 @@
          </image>
       </ImageView>
 
-      <VBox prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: pink;">
+      <VBox fx:id="player1_vbox" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: pink;">
          <children>
              <HBox prefHeight="40.0">
                  <children>
@@ -54,7 +54,7 @@
             <Insets top="25.0" />
          </VBox.margin>
       </VBox>
-      <VBox prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: teal;">
+      <VBox fx:id="player2_vbox" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: teal;">
          <children>
              <HBox prefHeight="40.0">
                  <children>
@@ -84,7 +84,7 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></VBox>
-      <VBox prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: coral;">
+      <VBox fx:id="player3_vbox" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: coral;">
          <children>
             <HBox prefHeight="40.0">
                <children>
@@ -111,7 +111,7 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></VBox>
-      <VBox prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: green;">
+      <VBox fx:id="player4_vbox" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: green;" visible="false">
          <children>
              <HBox prefHeight="40.0">
                  <children>
@@ -138,7 +138,7 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></VBox>
-      <VBox prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: purple;">
+      <VBox fx:id="player5_vbox" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: purple;" visible="false">
          <children>
              <HBox prefHeight="40.0">
                  <children>
@@ -165,7 +165,7 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></VBox>
-      <VBox prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: yellow;">
+      <VBox fx:id="player6_vbox" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: yellow;" visible="false">
          <children>
              <HBox prefHeight="40.0">
                  <children>

@@ -11,14 +11,14 @@ import java.awt.*;
 import java.io.IOException;
 
 
-public class HelloApplication extends Application {
+public class Ekonos extends Application {
     final double TABLERO_ASPECT_RATIO = 0.7244600116754232;
 
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Formulari.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Ekonos.class.getResource("Formulari.fxml"));
         scene = new Scene(fxmlLoader.load());
         stage.setTitle("Ekonos");
         stage.getIcons().add(new Image("file:src/main/resources/com/example/demogui/imatges/icon.png"));
@@ -33,7 +33,7 @@ public class HelloApplication extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Ekonos.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
 

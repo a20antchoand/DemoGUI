@@ -2,7 +2,7 @@ package com.example.demogui;
 
 import javafx.scene.image.ImageView;
 
-public class rotator extends Thread{
+public class Rotator extends Thread{
 
     ImageView img1;
     ImageView img2;
@@ -11,7 +11,7 @@ public class rotator extends Thread{
     ImageView img5;
     ImageView img6;
     
-    public rotator(ImageView img1, ImageView img2,ImageView img3,ImageView img4,ImageView img5,ImageView img6) {
+    public Rotator(ImageView img1, ImageView img2, ImageView img3, ImageView img4, ImageView img5, ImageView img6) {
         this.img1 = img1;
         this.img2 = img2;
         this.img3 = img3;

@@ -2,8 +2,10 @@ package com.example.demogui;
 
 import javafx.fxml.FXML;
 
-import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -20,6 +22,15 @@ public class Formulari {
 
 
     @FXML
+    private TextField player1_txt;
+
+    @FXML
+    private TextField player2_txt;
+
+    @FXML
+    private TextField player3_txt;
+
+    @FXML
     private TextField player4_txt;
 
     @FXML
@@ -33,7 +44,29 @@ public class Formulari {
 
     @FXML
     private void switchScene() throws IOException {
-        HelloApplication.setRoot("EkonosGUI");
+        Ekonos.setRoot("Ekonos");
+    }
+
+    @FXML
+    private void continuar() throws IOException {
+
+        List<String> jugadorsAux = new ArrayList<>();
+        List<String> jugadors = new ArrayList<>();
+
+        jugadorsAux.add(player1_txt.getText());
+        jugadorsAux.add(player2_txt.getText());
+        jugadorsAux.add(player3_txt.getText());
+        jugadorsAux.add(player4_txt.getText());
+        jugadorsAux.add(player5_txt.getText());
+        jugadorsAux.add(player6_txt.getText());
+
+        for (String s : jugadorsAux) {
+            if (!s.isEmpty()) {
+                jugadors.add(s);
+            }
+        }
+
+        switchScene();
     }
 
     @FXML
