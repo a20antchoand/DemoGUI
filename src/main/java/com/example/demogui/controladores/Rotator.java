@@ -1,4 +1,4 @@
-package com.example.demogui;
+package com.example.demogui.controladores;
 
 import javafx.scene.image.ImageView;
 

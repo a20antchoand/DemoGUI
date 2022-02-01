@@ -1,5 +1,6 @@
-package com.example.demogui;
+package com.example.demogui.controladores;
 
+import com.example.demogui.Ekonos_GUI;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 

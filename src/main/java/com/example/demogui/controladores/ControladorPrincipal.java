@@ -1,5 +1,7 @@
-package com.example.demogui;
+package com.example.demogui.controladores;
 
+import com.example.demogui.Ekonos_GUI;
+import com.example.demogui.OnLoadedEventListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

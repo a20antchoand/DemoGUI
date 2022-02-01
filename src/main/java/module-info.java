@@ -6,4 +6,6 @@ module com.example.demogui {
 
     opens com.example.demogui to javafx.fxml;
     exports com.example.demogui;
+    exports com.example.demogui.controladores;
+    opens com.example.demogui.controladores to javafx.fxml;
 }
