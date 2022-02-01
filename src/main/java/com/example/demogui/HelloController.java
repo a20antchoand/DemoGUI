@@ -1,9 +1,5 @@
 package com.example.demogui;
 
-import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -81,7 +77,6 @@ public class HelloController implements Initializable {
             // Cambio a los nuevos valores
             ((Button) btnSucursal).setPrefWidth(nuevoWidth);
             ((Button) btnSucursal).setPrefHeight(nuevoHeight);
-            ((Button) btnSucursal).setText("Hola");
             AnchorPane.setLeftAnchor(btnSucursal, leftAnchor_nuevo);
             AnchorPane.setTopAnchor(btnSucursal, topAnchor_nuevo);
         }
