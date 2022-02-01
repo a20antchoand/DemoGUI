@@ -1,37 +1,50 @@
 package com.example.demogui;
 
 import javafx.application.Application;
+import javafx.beans.Observable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
-
+import javafx.stage.WindowEvent;
 
 import java.awt.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 
-public class Ekonos extends Application {
+public class HelloApplication extends Application {
 
+    private Stage stage;
+
+
+    public static void main(String[] args) {
+        launch();
+    }
     public static List<String> nomJugadors = new ArrayList<>();
 
-    final double TABLERO_ASPECT_RATIO = 0.7244600116754232;
-
-    private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Ekonos.class.getResource("Formulari.fxml"));
-        scene = new Scene(fxmlLoader.load(), 1000, 1000);
+        this.stage = stage;
+
+
+        cambiarEscena(HelloApplication.class.getResource("EkonosGUI.fxml"));
+    }
+
+
+
+
+    public void cambiarEscena(URL recurso) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(recurso);
+        Scene scene = new Scene(fxmlLoader.load());
+
+
+        // Configura el stage
         stage.setTitle("Ekonos");
         stage.getIcons().add(new Image("file:src/main/resources/com/example/demogui/imatges/icon.png"));
         stage.setScene(scene);
         stage.setResizable(false);
-        //adaptarTamanio(stage);
         stage.show();
+    }
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -43,21 +56,5 @@ public class Ekonos extends Application {
         return fxmlLoader.load();
     }
 
-
-
-    private void adaptarTamanio(Stage stage) {
-        Dimension dimensionesPantalla = Toolkit.getDefaultToolkit().getScreenSize();
-        double windowHeight = dimensionesPantalla.getHeight() - 90;
-        double windowWidth = (windowHeight - 20) * TABLERO_ASPECT_RATIO + 300 + 200;
-
-
-        stage.setHeight(windowHeight);
-        stage.setWidth(windowWidth);
-    }
-
-
-    public static void main(String[] args) {
-        launch();
-    }
 
 }
