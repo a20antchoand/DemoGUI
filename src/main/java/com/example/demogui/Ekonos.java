@@ -7,11 +7,17 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 
+
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Ekonos extends Application {
+
+    public static List<String> nomJugadors = new ArrayList<>();
+
     final double TABLERO_ASPECT_RATIO = 0.7244600116754232;
 
     private static Scene scene;
@@ -19,7 +25,7 @@ public class Ekonos extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Ekonos.class.getResource("Formulari.fxml"));
-        scene = new Scene(fxmlLoader.load());
+        scene = new Scene(fxmlLoader.load(), 1000, 1000);
         stage.setTitle("Ekonos");
         stage.getIcons().add(new Image("file:src/main/resources/com/example/demogui/imatges/icon.png"));
         stage.setScene(scene);
@@ -36,6 +42,7 @@ public class Ekonos extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Ekonos.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
+
 
 
     private void adaptarTamanio(Stage stage) {

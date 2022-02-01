@@ -1,5 +1,6 @@
 package com.example.demogui;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
 
 import java.io.IOException;
@@ -42,16 +43,17 @@ public class Formulari {
 
     int numPlayers = 3;
 
+
     @FXML
-    private void switchScene() throws IOException {
-        Ekonos.setRoot("Ekonos");
+    private void historial() throws IOException {
+        Ekonos.setRoot("Historial");
     }
+
 
     @FXML
     private void continuar() throws IOException {
 
         List<String> jugadorsAux = new ArrayList<>();
-        List<String> jugadors = new ArrayList<>();
 
         jugadorsAux.add(player1_txt.getText());
         jugadorsAux.add(player2_txt.getText());
@@ -62,11 +64,13 @@ public class Formulari {
 
         for (String s : jugadorsAux) {
             if (!s.isEmpty()) {
-                jugadors.add(s);
+                Ekonos.nomJugadors.add(s);
             }
         }
 
-        switchScene();
+
+
+        Ekonos.setRoot("Ekonos");
     }
 
     @FXML
