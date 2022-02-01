@@ -46,7 +46,7 @@ public class Formulari {
 
     @FXML
     private void historial() throws IOException {
-        Ekonos.setRoot("Historial");
+        Ekonos_GUI.setRoot("Historial");
     }
 
 
@@ -64,13 +64,13 @@ public class Formulari {
 
         for (String s : jugadorsAux) {
             if (!s.isEmpty()) {
-                Ekonos.nomJugadors.add(s);
+                Ekonos_GUI.nomJugadors.add(s);
             }
         }
 
 
 
-        Ekonos.setRoot("Ekonos");
+        Ekonos_GUI.setRoot("Ekonos");
     }
 
     @FXML
