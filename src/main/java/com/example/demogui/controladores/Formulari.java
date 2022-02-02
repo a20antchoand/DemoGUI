@@ -8,9 +8,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class Formulari {
 
@@ -25,6 +27,9 @@ public class Formulari {
 
     @FXML
     private Button addPlayer;
+
+    @FXML
+    private Button btnContinuar;
 
     @FXML
     private TextField player1_txt;
@@ -44,6 +49,8 @@ public class Formulari {
     @FXML
     private TextField player6_txt;
 
+    @FXML
+    private AnchorPane formulari_GUI;
 
     int numPlayers = 3;
 
@@ -59,22 +66,26 @@ public class Formulari {
 
         List<String> jugadorsAux = new ArrayList<>();
 
-        jugadorsAux.add(player1_txt.getText());
-        jugadorsAux.add(player2_txt.getText());
-        jugadorsAux.add(player3_txt.getText());
-        jugadorsAux.add(player4_txt.getText());
-        jugadorsAux.add(player5_txt.getText());
-        jugadorsAux.add(player6_txt.getText());
-
-        for (String s : jugadorsAux) {
-            if (!s.isEmpty()) {
-                Ekonos_GUI.nomJugadors.add(s);
+        for (Node n : formulari_GUI.getChildren()) {
+            if (n instanceof TextField) {
+                if (!((TextField) n).getText().equals("")) {
+                    Ekonos_GUI.nomJugadors.add(((TextField) n).getText());
+                }
             }
         }
 
-
+        for (String s : Ekonos_GUI.nomJugadors) {
+            System.out.println(s);
+        }
 
         Ekonos_GUI.setRoot("Ekonos");
+    }
+
+    @FXML
+    private void validarMinimJugadors () {
+        if (player1_txt != null || player2_txt != null || player3_txt != null) {
+            btnContinuar.setDisable(false);
+        }
     }
 
     @FXML

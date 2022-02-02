@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="509.0" prefWidth="806.0" scaleShape="false" styleClass="formulario" stylesheets="@estilos/style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.controladores.Formulari">
+<AnchorPane fx:id="formulari_GUI" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="509.0" prefWidth="806.0" scaleShape="false" styleClass="formulario" stylesheets="@estilos/style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.controladores.Formulari">
 
    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="807.0" style="-fx-background-color: white;" text="BIENVENIDO A EKONOS">
       <font>
@@ -20,13 +20,13 @@
       </cursor>
    </Button>
 
-   <Button layoutX="123.0" layoutY="92.0" mnemonicParsing="false" onAction="#historial" prefWidth="125.0" styleClass="btnForm" text="Historial">
+   <Button disable="true" layoutX="123.0" layoutY="92.0" mnemonicParsing="false" onAction="#historial" prefWidth="125.0" styleClass="btnForm" text="Historial">
    <cursor>
       <Cursor fx:constant="HAND" />
    </cursor>
    </Button>
 
-   <Button layoutX="558.0" layoutY="92.0" mnemonicParsing="false" onAction="#continuar" prefWidth="125.0" styleClass="btnForm" text="Continuar">
+   <Button fx:id="btnContinuar" disable="true" layoutX="558.0" layoutY="92.0" mnemonicParsing="false" onAction="#continuar" prefWidth="125.0" styleClass="btnForm" text="Continuar">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
@@ -51,7 +51,7 @@
       </effect></TextField>
 
    <Label fx:id="player3_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="247.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-radius: 15px;" text="Jugador 3" textAlignment="CENTER" />
-   <TextField fx:id="player3_txt" layoutX="257.0" layoutY="245.0" prefHeight="25.0" prefWidth="426.0">
+   <TextField fx:id="player3_txt" layoutX="257.0" layoutY="245.0" onKeyReleased="#validarMinimJugadors" prefHeight="25.0" prefWidth="426.0">
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor>
