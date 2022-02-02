@@ -168,7 +168,7 @@ public class ControladorPrincipal implements Initializable {
 
     public void showCartas () {
 
-        int numJugador = 0;
+        int numCarta = 0;
 
         for (Node n : cartas.getChildren()) {
             if (n instanceof VBox) {
@@ -177,17 +177,70 @@ public class ControladorPrincipal implements Initializable {
                 for (Node o : ((VBox) n).getChildren()) {
                     System.out.println(o.getId());
                     if (o instanceof ImageView) {
-                        if (o.getId().contains("op1")) {
-                            ((ImageView) o).setImage(new Image(GAMMA));
-                        }
-                        if (o.getId().contains("op2")) {
-                            ((ImageView) o).setImage(new Image(GREEN));
-                        }
-                        if (o.getId().contains("op3")) {
-                            ((ImageView) o).setImage(new Image(PINK));
+                        if (numCarta == 0) {
+                            if (o.getId().contains("op1")) {
+                                ((ImageView) o).setImage(new Image(ALPHA));
+                            }
+                            if (o.getId().contains("op2")) {
+                                ((ImageView) o).setImage(new Image(GREEN));
+                            }
+                            if (o.getId().contains("op3")) {
+                                ((ImageView) o).setImage(new Image(PINK));
+                            }
+                        } else if (numCarta == 1) {
+                            if (o.getId().contains("op1")) {
+                                ((ImageView) o).setImage(new Image(BETA));
+                            }
+                            if (o.getId().contains("op2")) {
+                                ((ImageView) o).setImage(new Image(YELLOW));
+                            }
+                            if (o.getId().contains("op3")) {
+                                ((ImageView) o).setImage(new Image(RED));
+                            }
+                        } else if (numCarta == 2) {
+                            if (o.getId().contains("op1")) {
+                                ((ImageView) o).setImage(new Image(GAMMA));
+                            }
+                            if (o.getId().contains("op2")) {
+                                ((ImageView) o).setImage(new Image(BLUE));
+                            }
+                            if (o.getId().contains("op3")) {
+                                ((ImageView) o).setImage(new Image(DARKBLUE));
+                            }
+                        } else if (numCarta == 3) {
+                            if (o.getId().contains("op1")) {
+                                ((ImageView) o).setImage(new Image(DELTA));
+                            }
+                            if (o.getId().contains("op2")) {
+                                ((ImageView) o).setImage(new Image(YELLOW));
+                            }
+                            if (o.getId().contains("op3")) {
+                                ((ImageView) o).setImage(new Image(RED));
+                            }
+                        } else if (numCarta == 4) {
+                            if (o.getId().contains("op1")) {
+                                ((ImageView) o).setImage(new Image(EPSILON));
+                            }
+                            if (o.getId().contains("op2")) {
+                                ((ImageView) o).setImage(new Image(GREEN));
+                            }
+                            if (o.getId().contains("op3")) {
+                                ((ImageView) o).setImage(new Image(PINK));
+                            }
+                        } else if (numCarta == 5) {
+                            if (o.getId().contains("op1")) {
+                                ((ImageView) o).setImage(new Image(OMICRON));
+                            }
+                            if (o.getId().contains("op2")) {
+                                ((ImageView) o).setImage(new Image(DARKBLUE));
+                            }
+                            if (o.getId().contains("op3")) {
+                                ((ImageView) o).setImage(new Image(GREEN));
+                            }
                         }
                     }
                 }
+                numCarta++;
             }
         }
     }
