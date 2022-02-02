@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -22,6 +23,8 @@ public class Formulari {
     @FXML
     private Label player6_lbl;
 
+    @FXML
+    private Button addPlayer;
 
     @FXML
     private TextField player1_txt;
@@ -89,6 +92,7 @@ public class Formulari {
             case (6):
                 player6_lbl.setVisible(true);
                 player6_txt.setVisible(true);
+                addPlayer.setVisible(false);
                 break;
         }
     }
