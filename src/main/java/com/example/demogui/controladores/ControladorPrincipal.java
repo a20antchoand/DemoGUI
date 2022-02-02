@@ -20,8 +20,8 @@ import java.util.ResourceBundle;
 public class ControladorPrincipal implements Initializable {
 
     final double TABLERO_ASPECT_RATIO = 0.7244600116754232;
-    final double MARGEN_TABLERO = 90.0;
-    final double MEDIDA_BARRA_STAGE = 20.0;
+    final double MARGEN_TABLERO = 0.87;
+    final double MEDIDA_BARRA_STAGE = 34.0;
 
 
     @FXML
@@ -40,6 +40,7 @@ public class ControladorPrincipal implements Initializable {
     private ImageView rotateImp3;
     @FXML
     private ImageView rotatePar3;
+
     private List<String> nomJugadors = new ArrayList<>();
 
 
@@ -66,7 +67,7 @@ public class ControladorPrincipal implements Initializable {
         double height;
 
 
-        height = dimensionesPantalla.getHeight() - 120;
+        height = dimensionesPantalla.getHeight() * MARGEN_TABLERO;
         width = height * TABLERO_ASPECT_RATIO;
 
         return new double[] { width, height };
@@ -85,18 +86,17 @@ public class ControladorPrincipal implements Initializable {
     }
 
 
-    private void adaptarDimensionPantalla(double tableroWidth, double tablerHeight) {
-        ekonos_GP.getScene().getWindow().setWidth(tableroWidth + obtenerAnchoPanelesLaterales());
-        ekonos_GP.getScene().getWindow().setHeight(tablerHeight + MEDIDA_BARRA_STAGE + 100);
-
-
+    private void adaptarDimensionPantalla(double tableroWidth, double tableroHeight) {
         panelTablero.setMinWidth(tableroWidth);
         panelTablero.setPrefWidth(tableroWidth);
         panelTablero.setMaxWidth(tableroWidth);
 
-        panelTablero.setMinHeight(tablerHeight);
-        panelTablero.setPrefHeight(tablerHeight);
-        panelTablero.setMaxHeight(tablerHeight);
+        panelTablero.setMinHeight(tableroHeight);
+        panelTablero.setPrefHeight(tableroHeight);
+        panelTablero.setMaxHeight(tableroHeight);
+
+        ekonos_GP.getScene().getWindow().setWidth(tableroWidth + obtenerAnchoPanelesLaterales());
+        ekonos_GP.getScene().getWindow().setHeight(tableroHeight + MEDIDA_BARRA_STAGE);
     }
 
 
@@ -125,12 +125,6 @@ public class ControladorPrincipal implements Initializable {
             AnchorPane.setLeftAnchor(btnSucursal, leftAnchor_nuevo);
             AnchorPane.setTopAnchor(btnSucursal, topAnchor_nuevo);
         }
-
-
-        System.out.println("Dimensiones pantalla: " + ekonos_GP.getScene().getWindow().getWidth() + " * " + ekonos_GP.getScene().getWindow().getHeight());
-        System.out.println("Dimensiones paneles laterales: " + obtenerAnchoPanelesLaterales());
-        System.out.println("Dimensiones tablero: " + panelTablero.getWidth() + " * " + panelTablero.getHeight());
-
     }
 
 

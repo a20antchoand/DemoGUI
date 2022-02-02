@@ -204,7 +204,7 @@
          </VBox.margin></VBox>
     </VBox>
 
-    <AnchorPane fx:id="panelTablero" prefHeight="836.0" prefWidth="606.0" styleClass="tablero" stylesheets="@estilos/style.css" GridPane.columnIndex="1" GridPane.fillHeight="true" GridPane.fillWidth="true" GridPane.rowIndex="0">
+    <AnchorPane fx:id="panelTablero" prefHeight="836.0" prefWidth="606.0" styleClass="tablero" stylesheets="@estilos/style.css" GridPane.columnIndex="1" GridPane.fillHeight="true" GridPane.fillWidth="true" GridPane.rowIndex="0" GridPane.valignment="TOP">
         <Button fx:id="suc1" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@estilos/style.css" AnchorPane.leftAnchor="123.0" AnchorPane.topAnchor="522.0" />
         <Button fx:id="suc2" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@estilos/style.css" AnchorPane.leftAnchor="176.0" AnchorPane.topAnchor="477.0" />
         <Button fx:id="suc3" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@estilos/style.css" AnchorPane.leftAnchor="287.0" AnchorPane.topAnchor="444.0" />
@@ -248,58 +248,7 @@
         <tabs>
           <Tab text="Cartas">
             <content>
-              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="373.0" prefWidth="350.0">
-                     <children>
-                        <ImageView fx:id="rotateImp1" fitHeight="500.0" fitWidth="150.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@imatges/cartaBack.png" />
-                           </image>
-                           <rotationAxis>
-                              <Point3D y="1.0" />
-                           </rotationAxis>
-                        </ImageView>
-                        <ImageView fx:id="rotatePar1" fitHeight="500.0" fitWidth="150.0" layoutX="170.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@imatges/cartaFrontal.png" />
-                           </image>
-                           <rotationAxis>
-                              <Point3D y="1.0" />
-                           </rotationAxis>
-                        </ImageView>
-                        <ImageView fx:id="rotateImp2" fitHeight="500.0" fitWidth="150.0" layoutX="10.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@imatges/cartaBack.png" />
-                           </image>
-                           <rotationAxis>
-                              <Point3D y="1.0" />
-                           </rotationAxis>
-                        </ImageView>
-                        <ImageView fx:id="rotatePar2" fitHeight="500.0" fitWidth="150.0" layoutX="170.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@imatges/cartaFrontal.png" />
-                           </image>
-                           <rotationAxis>
-                              <Point3D y="1.0" />
-                           </rotationAxis>
-                        </ImageView>
-                        <ImageView fx:id="rotateImp3" fitHeight="500.0" fitWidth="150.0" layoutX="10.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@imatges/cartaBack.png" />
-                           </image>
-                           <rotationAxis>
-                              <Point3D y="1.0" />
-                           </rotationAxis>
-                        </ImageView>
-                        <ImageView fx:id="rotatePar3" fitHeight="500.0" fitWidth="150.0" layoutX="170.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@imatges/cartaFrontal.png" />
-                           </image>
-                           <rotationAxis>
-                              <Point3D y="1.0" />
-                           </rotationAxis>
-                        </ImageView>
-                        <Button fx:id="gira" layoutX="139.0" layoutY="699.0" mnemonicParsing="false" onAction="#onClick_btn" text="Button" />
-                     </children></AnchorPane>
+
             </content>
           </Tab>
           <Tab disable="true" text="Vender">

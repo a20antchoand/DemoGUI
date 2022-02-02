@@ -20,7 +20,7 @@
 }
 
 .btnSucursal {
-    -fx-background-color: green;
+    -fx-background-color: transparent;
     -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 1em; /* 12 */
     -fx-text-fill: #828282;
