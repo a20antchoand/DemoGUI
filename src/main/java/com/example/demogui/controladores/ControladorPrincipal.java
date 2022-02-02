@@ -4,11 +4,11 @@ import com.example.demogui.Ekonos_GUI;
 import com.example.demogui.OnLoadedEventListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 
 import java.awt.*;
 import java.io.IOException;
@@ -29,27 +29,16 @@ public class ControladorPrincipal implements Initializable {
     @FXML
     private AnchorPane panelTablero;
     @FXML
-    private ImageView rotateImp1;
-    @FXML
-    private ImageView rotatePar1;
-    @FXML
-    private ImageView rotateImp2;
-    @FXML
-    private ImageView rotatePar2;
-    @FXML
-    private ImageView rotateImp3;
-    @FXML
-    private ImageView rotatePar3;
+    private VBox panel1;
 
     private List<String> nomJugadors = new ArrayList<>();
+    public static List<Node> VBOXJugadors = new ArrayList<>();
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         new OnLoadedEventListener(ekonos_GP, this::redimensionarJuego);
     }
-
-
 
 
     private void redimensionarJuego() {
@@ -135,10 +124,33 @@ public class ControladorPrincipal implements Initializable {
         Ekonos_GUI.setRoot("formulari");
     }
 
-    public void onClick_btn () {
-        Rotator r = new Rotator(rotateImp1, rotateImp2, rotateImp3, rotatePar1, rotatePar2, rotatePar3);
+    @FXML
+    public void showUsers () {
 
-        r.run();
+        int numJugador = 0;
 
+        for (Node n : panel1.getChildren()) {
+            if (n instanceof VBox && numJugador<Ekonos_GUI.nomJugadors.size()) {
+                n.setVisible(true);
+                for (Node e : ((VBox) n).getChildren()) {
+                    if (e instanceof HBox) {
+                        for (Node d : ((HBox) e).getChildren()) {
+                            if (d instanceof Label) {
+                                if (d.getId().contains("jugNom")) {
+                                    ((Label) d).setText(Ekonos_GUI.nomJugadors.get(numJugador));
+                                }
+                                if (d.getId().contains("jugEco")) {
+                                    ((Label) d).setText(12 + "€");
+                                }
+                            }
+                        }
+                    }
+                }
+                numJugador++;
+            }
+
+        }
     }
+
+
 }

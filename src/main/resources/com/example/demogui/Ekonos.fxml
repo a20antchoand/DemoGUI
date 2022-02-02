@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.geometry.Point3D?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane fx:id="ekonos_GP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.controladores.ControladorPrincipal">
+<GridPane fx:id="ekonos_GP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.controladores.ControladorPrincipal">
     <columnConstraints>
         <ColumnConstraints hgrow="NEVER" maxWidth="200" minWidth="200" prefWidth="200" />
         <ColumnConstraints hgrow="ALWAYS" />
@@ -44,12 +34,12 @@
                          <image>
                              <Image url="@imatges/chrome.png" />
                          </image></ImageView>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
+                     <Label fx:id="jugNom1" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;">
                          <HBox.margin>
                              <Insets left="20.0" />
                          </HBox.margin>
                      </Label>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
+                     <Label fx:id="jugEco1" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
                          <HBox.margin>
                              <Insets left="10.0" />
                          </HBox.margin>
@@ -72,12 +62,12 @@
                          <image>
                              <Image url="@imatges/chrome.png" />
                          </image></ImageView>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
+                     <Label fx:id="jugNom2" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
                          <HBox.margin>
                              <Insets left="20.0" />
                          </HBox.margin>
                      </Label>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
+                     <Label fx:id="jugEco2" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
                          <HBox.margin>
                              <Insets left="10.0" />
                          </HBox.margin>
@@ -102,12 +92,12 @@
                      <image>
                         <Image url="@imatges/chrome.png" />
                      </image></ImageView>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
+                  <Label fx:id="jugNom3" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
+                  <Label fx:id="jugEco3" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -129,12 +119,12 @@
                          <image>
                              <Image url="@imatges/chrome.png" />
                          </image></ImageView>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
+                     <Label fx:id="jugNom4" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
                          <HBox.margin>
                              <Insets left="20.0" />
                          </HBox.margin>
                      </Label>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
+                     <Label fx:id="jugEco4" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
                          <HBox.margin>
                              <Insets left="10.0" />
                          </HBox.margin>
@@ -156,12 +146,12 @@
                          <image>
                              <Image url="@imatges/chrome.png" />
                          </image></ImageView>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
+                     <Label fx:id="jugNom5" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
                          <HBox.margin>
                              <Insets left="20.0" />
                          </HBox.margin>
                      </Label>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
+                     <Label fx:id="jugEco5" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
                          <HBox.margin>
                              <Insets left="10.0" />
                          </HBox.margin>
@@ -183,12 +173,12 @@
                          <image>
                              <Image url="@imatges/chrome.png" />
                          </image></ImageView>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
+                     <Label fx:id="jugNom6" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 20;" text="Toni">
                          <HBox.margin>
                              <Insets left="20.0" />
                          </HBox.margin>
                      </Label>
-                     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
+                     <Label fx:id="jugEco6" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-font-size: 15;" text="12€">
                          <HBox.margin>
                              <Insets left="10.0" />
                          </HBox.margin>
@@ -202,6 +192,7 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></VBox>
+      <Button mnemonicParsing="false" onAction="#showUsers" text="Button" />
     </VBox>
 
     <AnchorPane fx:id="panelTablero" prefHeight="836.0" prefWidth="606.0" styleClass="tablero" stylesheets="@estilos/style.css" GridPane.columnIndex="1" GridPane.fillHeight="true" GridPane.fillWidth="true" GridPane.rowIndex="0" GridPane.valignment="TOP">
@@ -494,7 +485,7 @@
           </Tab>
         </tabs>
          <VBox.margin>
-            <Insets left="5.0" />
+            <Insets left="5.0" right="10.0" />
          </VBox.margin>
       </TabPane>
 

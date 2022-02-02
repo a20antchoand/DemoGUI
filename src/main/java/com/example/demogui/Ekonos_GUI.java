@@ -2,9 +2,11 @@ package com.example.demogui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -17,7 +19,8 @@ public class Ekonos_GUI extends Application {
 
     private static Scene scene;
     public static List<String> nomJugadors = new ArrayList<>();
-
+    public static List<Node> VBOXJugadors = new ArrayList<>();
+    public static AnchorPane AnchorJugadors;
 
     public static void main(String[] args) {
         launch();
@@ -31,7 +34,7 @@ public class Ekonos_GUI extends Application {
         stage.setTitle("Ekonos");
         stage.getIcons().add(new Image("file:src/main/resources/com/example/demogui/imatges/icon.png"));
         stage.setScene(scene);
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
 
