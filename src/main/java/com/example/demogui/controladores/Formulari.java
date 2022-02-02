@@ -1,6 +1,7 @@
 package com.example.demogui.controladores;
 
 import com.example.demogui.Ekonos_GUI;
+import com.example.demogui.OnLoadedEventListener;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 
@@ -77,7 +78,6 @@ public class Formulari {
         }
 
         Ekonos_GUI.setRoot("Ekonos");
-
 
     }
 

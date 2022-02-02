@@ -192,7 +192,6 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></VBox>
-      <Button mnemonicParsing="false" onAction="#showUsers" text="Button" />
     </VBox>
 
     <AnchorPane fx:id="panelTablero" prefHeight="836.0" prefWidth="606.0" styleClass="tablero" stylesheets="@estilos/style.css" GridPane.columnIndex="1" GridPane.fillHeight="true" GridPane.fillWidth="true" GridPane.rowIndex="0" GridPane.valignment="TOP">
@@ -242,7 +241,7 @@
                 <GridPane fx:id="cartas" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="619.0" prefWidth="295.0">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="1.0" />
+                        <ColumnConstraints minWidth="10.0" prefWidth="1.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
@@ -254,7 +253,7 @@
                      <VBox prefHeight="196.0" prefWidth="148.0" visible="false">
                         <children>
 
-                           <ImageView fx:id="c1op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fx:id="c1op1" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#colocarSucursal" pickOnBounds="true" preserveRatio="true">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin>
@@ -263,7 +262,7 @@
                               </image>
                            </ImageView>
 
-                           <ImageView fx:id="c1op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fx:id="c1op2" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin>
@@ -272,7 +271,7 @@
                                </image>
                            </ImageView>
 
-                           <ImageView fx:id="c1op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fx:id="c1op3" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin>
@@ -288,7 +287,7 @@
                      </VBox>
                      <VBox prefHeight="180.0" prefWidth="147.0" visible="false" GridPane.columnIndex="2">
                         <children>
-                            <ImageView fx:id="c2op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c2op1" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#colocarSucursal" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -297,7 +296,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fx:id="c2op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c2op2" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -306,7 +305,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fx:id="c2op3" fitHeight="66.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c2op3" fitHeight="66.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -321,7 +320,7 @@
                      </VBox>
                      <VBox prefHeight="200.0" prefWidth="148.0" visible="false" GridPane.rowIndex="1">
                         <children>
-                           <ImageView fx:id="c3op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fx:id="c3op1" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#colocarSucursal" pickOnBounds="true" preserveRatio="true">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin>
@@ -332,7 +331,7 @@
 
                            </ImageView>
 
-                            <ImageView fx:id="c3op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c3op2" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -341,7 +340,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fx:id="c3op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c3op3" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -357,7 +356,7 @@
                      </VBox>
                      <VBox prefHeight="215.0" prefWidth="100.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
                         <children>
-                            <ImageView fx:id="c4op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c4op1" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#colocarSucursal" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -368,7 +367,7 @@
 
                             </ImageView>
 
-                            <ImageView fx:id="c4op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c4op2" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -377,7 +376,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fx:id="c4op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c4op3" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -392,7 +391,7 @@
                     </VBox>
                     <VBox prefHeight="215.0" prefWidth="100.0" visible="false" GridPane.rowIndex="2">
                         <children>
-                            <ImageView fx:id="c5op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c5op1" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#colocarSucursal" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -403,7 +402,7 @@
 
                             </ImageView>
 
-                            <ImageView fx:id="c5op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c5op2" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -412,7 +411,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fx:id="c5op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c5op3" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -427,7 +426,7 @@
                     </VBox>
                     <VBox prefHeight="215.0" prefWidth="100.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
                         <children>
-                            <ImageView fx:id="c6op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c6op1" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#colocarSucursal" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -438,7 +437,7 @@
 
                             </ImageView>
 
-                            <ImageView fx:id="c6op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c6op2" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -447,7 +446,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fx:id="c6op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c6op3" fitHeight="65.0" fitWidth="145.0" onMouseClicked="#mejorarEmpresa" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
