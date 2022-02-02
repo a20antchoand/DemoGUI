@@ -1,5 +1,6 @@
 package com.example.demogui.controladores;
 
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Rotator extends Thread{
@@ -23,19 +24,14 @@ public class Rotator extends Thread{
     @Override
     public void run() {
 
-        do {
-            img1.setRotate(img1.getRotate() + 10);
-            img2.setRotate(img2.getRotate() + 10);
-            img3.setRotate(img3.getRotate() + 10);
-            img4.setRotate(img4.getRotate() + 10);
-            img5.setRotate(img5.getRotate() + 10);
-            img6.setRotate(img6.getRotate() + 10);
-            try {
-                Thread.sleep(200);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        } while (img1.getRotate() != 90);
+
+            img1.setImage(new Image("file:src/main/resources/com/example/demogui/imatges/cartaFrontal.png"));
+            img2.setImage(new Image("file:src/main/resources/com/example/demogui/imatges/cartaFrontal.png"));
+            img3.setImage(new Image("file:src/main/resources/com/example/demogui/imatges/cartaFrontal.png"));
+            img4.setImage(new Image("file:src/main/resources/com/example/demogui/imatges/cartaFrontal.png"));
+            img5.setImage(new Image("file:src/main/resources/com/example/demogui/imatges/cartaFrontal.png"));
+            img6.setImage(new Image("file:src/main/resources/com/example/demogui/imatges/cartaFrontal.png"));
+
 
     }
 }
