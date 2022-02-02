@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
@@ -30,6 +31,8 @@ public class ControladorPrincipal implements Initializable {
     private AnchorPane panelTablero;
     @FXML
     private VBox panel1;
+    @FXML
+    private GridPane cartas;
 
     private List<String> nomJugadors = new ArrayList<>();
     public static List<Node> VBOXJugadors = new ArrayList<>();
@@ -117,13 +120,6 @@ public class ControladorPrincipal implements Initializable {
     }
 
 
-
-
-    @FXML
-    private void switchView() throws IOException {
-        Ekonos_GUI.setRoot("formulari");
-    }
-
     @FXML
     public void showUsers () {
 
@@ -149,6 +145,35 @@ public class ControladorPrincipal implements Initializable {
                 numJugador++;
             }
 
+        }
+
+        showCartas();
+    }
+
+
+    public void showCartas () {
+
+        int numJugador = 0;
+
+        for (Node n : cartas.getChildren()) {
+            if (n instanceof VBox) {
+                System.out.println(n.getId());
+                n.setVisible(true);
+                for (Node o : ((VBox) n).getChildren()) {
+                    System.out.println(o.getId());
+                    if (o instanceof ImageView) {
+                        if (o.getId().contains("op1")) {
+                            ((ImageView) o).setImage(new Image("file:src/main/resources/com/example/demogui/imatges/Cartas/Epsilon.png"));
+                        }
+                        if (o.getId().contains("op2")) {
+                            ((ImageView) o).setImage(new Image("file:src/main/resources/com/example/demogui/imatges/Cartas/Epsilon.png"));
+                        }
+                        if (o.getId().contains("op3")) {
+                            ((ImageView) o).setImage(new Image("file:src/main/resources/com/example/demogui/imatges/Cartas/Epsilon.png"));
+                        }
+                    }
+                }
+            }
         }
     }
 

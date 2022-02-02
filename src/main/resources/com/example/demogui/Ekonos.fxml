@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="ekonos_GP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.controladores.ControladorPrincipal">
+<GridPane fx:id="ekonos_GP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demogui.controladores.ControladorPrincipal">
     <columnConstraints>
         <ColumnConstraints hgrow="NEVER" maxWidth="200" minWidth="200" prefWidth="200" />
         <ColumnConstraints hgrow="ALWAYS" />
@@ -234,14 +234,15 @@
         <Button fx:id="suc36" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btnSucursal" stylesheets="@estilos/style.css" AnchorPane.leftAnchor="446.0" AnchorPane.topAnchor="773.0" />
     </AnchorPane>
 
-    <VBox fx:id="panel2" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="panelLateral" stylesheets="@estilos/style.css" GridPane.columnIndex="2">
+    <VBox fx:id="panel2" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="808.0" prefWidth="352.0" styleClass="panelLateral" stylesheets="@estilos/style.css" GridPane.columnIndex="2">
       <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Cartas">
             <content>
-                <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="619.0" prefWidth="295.0">
+                <GridPane fx:id="cartas" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="619.0" prefWidth="295.0">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="1.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
@@ -250,10 +251,10 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
 
-                     <VBox prefHeight="196.0" prefWidth="148.0" style="-fx-border-color: white;">
+                     <VBox prefHeight="196.0" prefWidth="148.0" visible="false">
                         <children>
 
-                           <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fx:id="c1op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin>
@@ -262,7 +263,7 @@
                               </image>
                            </ImageView>
 
-                           <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fx:id="c1op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin>
@@ -271,7 +272,7 @@
                                </image>
                            </ImageView>
 
-                           <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fx:id="c1op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin>
@@ -285,9 +286,9 @@
                            <Insets />
                         </GridPane.margin>
                      </VBox>
-                     <VBox prefHeight="180.0" prefWidth="147.0" style="-fx-border-color: white;" GridPane.columnIndex="1">
+                     <VBox prefHeight="180.0" prefWidth="147.0" visible="false" GridPane.columnIndex="2">
                         <children>
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c2op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -296,7 +297,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c2op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -305,7 +306,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fitHeight="66.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c2op3" fitHeight="66.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -318,9 +319,9 @@
                            <Insets />
                         </GridPane.margin>
                      </VBox>
-                     <VBox prefHeight="200.0" prefWidth="148.0" style="-fx-border-color: white;" GridPane.rowIndex="1">
+                     <VBox prefHeight="200.0" prefWidth="148.0" visible="false" GridPane.rowIndex="1">
                         <children>
-                           <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fx:id="c3op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin>
@@ -331,7 +332,7 @@
 
                            </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c3op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -340,7 +341,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c3op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -354,9 +355,9 @@
                            <Insets />
                         </GridPane.margin>
                      </VBox>
-                     <VBox prefHeight="215.0" prefWidth="100.0" style="-fx-border-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <VBox prefHeight="215.0" prefWidth="100.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
                         <children>
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c4op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -367,7 +368,7 @@
 
                             </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c4op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -376,7 +377,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c4op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -389,9 +390,9 @@
                            <Insets />
                         </GridPane.margin>
                     </VBox>
-                    <VBox prefHeight="215.0" prefWidth="100.0" style="-fx-border-color: white;" GridPane.rowIndex="2">
+                    <VBox prefHeight="215.0" prefWidth="100.0" visible="false" GridPane.rowIndex="2">
                         <children>
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c5op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -402,7 +403,7 @@
 
                             </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c5op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -411,7 +412,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c5op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -424,9 +425,9 @@
                            <Insets />
                         </GridPane.margin>
                     </VBox>
-                    <VBox prefHeight="215.0" prefWidth="100.0" style="-fx-border-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <VBox prefHeight="215.0" prefWidth="100.0" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
                         <children>
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c6op1" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -437,7 +438,7 @@
 
                             </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c6op2" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -446,7 +447,7 @@
                                 </image>
                             </ImageView>
 
-                            <ImageView fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fx:id="c6op3" fitHeight="65.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
@@ -460,7 +461,7 @@
                         </GridPane.margin>
                      </VBox>
                      <padding>
-                        <Insets top="10.0" />
+                        <Insets right="15.0" top="10.0" />
                      </padding>
                 </GridPane>
             </content>

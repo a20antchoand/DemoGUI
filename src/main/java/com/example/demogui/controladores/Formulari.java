@@ -76,11 +76,9 @@ public class Formulari {
             }
         }
 
-        for (String s : Ekonos_GUI.nomJugadors) {
-            System.out.println(s);
-        }
-
         Ekonos_GUI.setRoot("Ekonos");
+
+
     }
 
     @FXML
